@@ -1,0 +1,8 @@
+stages:
+  data_prep:
+    cmd: python src/data_prep.py
+    deps:
+      - src/data_prep.py
+      - data/raw/telco_churn.csv
+    outs:
+      - outputs/telco_churn_clean.csv
