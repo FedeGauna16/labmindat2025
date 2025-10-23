@@ -16,5 +16,6 @@ stages:
       - train
     outs:
       - models/model.joblib
+      - metrics.json
     metrics:
       - metrics.json
