@@ -6,3 +6,15 @@ stages:
       - data/raw/telco_churn.csv
     outs:
       - outputs/telco_churn_clean.csv
+    
+  train:
+    cmd: python src/train.py
+    deps:
+      - src/train.py
+      - outputs/telco_churn_clean.csv
+    params:
+      - train
+    outs:
+      - models/model.joblib
+    metrics:
+      - metrics.json
