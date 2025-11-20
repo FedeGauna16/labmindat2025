@@ -3,5 +3,5 @@ train:
   random_state: 42
   model:
     penalty: "l2"
-    C: 1.0
+    C: 10
     solver: "liblinear"
