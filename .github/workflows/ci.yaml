@@ -1,0 +1,40 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout del repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Instalar dependencias
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Configurar credenciales de DagsHub
+      - name: Configure DagsHub credentials
+        env:
+          DAGSHUB_USER: ${{ secrets.DAGSHUB_USER }}
+          DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+        run: |
+          git config --global credential.helper store
+          echo "https://${DAGSHUB_USER}:${DAGSHUB_TOKEN}@dagshub.com" > ~/.git-credentials
+
+      # Hacer dvc pull (tráete los datos)
+      - name: DVC Pull
+        run: dvc pull -v
+
+      # Correr pipeline
+      - name: Run DVC pipeline
+        run: dvc repro -v
+
+      # Mostrar métricas
+      - name: Show metrics
+        run: cat metrics.json

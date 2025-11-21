@@ -15,7 +15,10 @@ import mlflow
 
 
 def main():
-   
+    
+    # Configurar experimento de MLflow
+    mlflow.set_experiment("Predicción_Churn en Telco")
+
    # Cargar parámetros desde el archivo YAML
 
     with open("params.yaml", "r") as f:
@@ -37,7 +40,7 @@ def main():
     )
 
     # Iniciar MLflow
-    with mlflow.start_run(run_name=f"logreg_C={model_params.get('C')}"):
+    with mlflow.start_run(run_name=f"LogRegModel={model_params.get('C')}"):
 
         mlflow.log_param("test_size", test_size)
         mlflow.log_param("random_state", random_state)
