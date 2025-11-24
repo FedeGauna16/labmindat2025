@@ -16,3 +16,32 @@ stages:
       hash: md5
       md5: 3cdbfeb64a5df4f2e77cfd3d66caecf0
       size: 1022253
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: outputs/telco_churn_clean.csv
+      hash: md5
+      md5: 3cdbfeb64a5df4f2e77cfd3d66caecf0
+      size: 1022253
+    - path: src/train.py
+      hash: md5
+      md5: b037d0a4f06933bff7cadfb78c254d14
+      size: 2430
+    params:
+      params.yaml:
+        train:
+          test_size: 0.2
+          random_state: 42
+          model:
+            penalty: l2
+            C: 10
+            solver: liblinear
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: a794d0e4452e2fe95d766eff82ed47ed
+      size: 132
+    - path: models/model.joblib
+      hash: md5
+      md5: fda852efcfb4806c9ed46b8e64930963
+      size: 1771
