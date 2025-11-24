@@ -1,0 +1,15 @@
+cmd: python src/data_prep.py
+deps:
+- path: data/raw/telco_churn.csv
+  hash: md5
+  md5: 006527876bfe18c977d74eb4bc59443f
+  size: 873370
+- path: src/data_prep.py
+  hash: md5
+  md5: 486e4bcf805b3181b29d4b8ae81b173b
+  size: 1099
+outs:
+- path: outputs/telco_churn_clean.csv
+  hash: md5
+  md5: 3cdbfeb64a5df4f2e77cfd3d66caecf0
+  size: 1022253
