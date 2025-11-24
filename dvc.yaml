@@ -18,3 +18,11 @@ stages:
       - models/model.joblib
     metrics:
       - metrics.json
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+      - src/evaluate.py
+      - models/model.joblib
+      - outputs/telco_churn_clean.csv
+    outs:
+      - reports/
