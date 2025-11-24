@@ -33,8 +33,6 @@ jobs:
           DAGSHUB_USER: ${{ secrets.DAGSHUB_USER }}
           DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
         run: |
-          echo "USER LENGTH: ${#DAGSHUB_USER}"
-          echo "TOKEN LENGTH: ${#DAGSHUB_TOKEN}"
           dvc remote modify dagshub --local user $DAGSHUB_USER
           dvc remote modify dagshub --local password $DAGSHUB_TOKEN
 

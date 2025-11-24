@@ -34,14 +34,14 @@ stages:
           random_state: 42
           model:
             penalty: l2
-            C: 10
+            C: 0.5
             solver: liblinear
     outs:
     - path: metrics.json
       hash: md5
-      md5: a794d0e4452e2fe95d766eff82ed47ed
+      md5: 29f2875a07cf4e680d3816c4adfbfa2e
       size: 132
     - path: models/model.joblib
       hash: md5
-      md5: fda852efcfb4806c9ed46b8e64930963
+      md5: 9e78f624bc7703ef00aadf3a01eed832
       size: 1771
