@@ -27,6 +27,16 @@ jobs:
           git config --global credential.helper store
           echo "https://${DAGSHUB_USER}:${DAGSHUB_TOKEN}@dagshub.com" > ~/.git-credentials
 
+      # Configurar DVC remote
+      - name: Setup DVC remote
+        env:
+          DAGSHUB_USER: ${{ secrets.DAGSHUB_USER }}
+          DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+        run: |
+          dvc remote modify dagshub --local auth basic
+          dvc remote modify dagshub --local user $DAGSHUB_USER
+          dvc remote modify dagshub --local password $DAGSHUB_TOKEN
+
       # Hacer dvc pull (tráete los datos)
       - name: DVC Pull
         run: dvc pull -v
