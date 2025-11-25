@@ -122,7 +122,9 @@ def main():
         # Guardar el modelo
         os.makedirs("models", exist_ok=True)
         joblib.dump(model, "models/model.joblib")
-        mlflow.sklearn.log_model(model, "model")
+        mlflow.log_artifact("models/model.joblib")
+        mlflow.log_artifact("metrics.json")
+
 
 if __name__ == "__main__":
     main()

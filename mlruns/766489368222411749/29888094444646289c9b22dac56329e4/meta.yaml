@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/fede/Documents/GitHub/labmindat2025/mlruns/766489368222411749/29888094444646289c9b22dac56329e4/artifacts
+end_time: 1764087376220
+entry_point_name: ''
+experiment_id: '766489368222411749'
+lifecycle_stage: active
+run_id: 29888094444646289c9b22dac56329e4
+run_name: logistic_regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764087376136
+status: 4
+tags: []
+user_id: fede

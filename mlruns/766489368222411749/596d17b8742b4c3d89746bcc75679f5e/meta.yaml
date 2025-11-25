@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/fede/Documents/GitHub/labmindat2025/mlruns/766489368222411749/596d17b8742b4c3d89746bcc75679f5e/artifacts
+end_time: 1763924066494
+entry_point_name: ''
+experiment_id: '766489368222411749'
+lifecycle_stage: active
+run_id: 596d17b8742b4c3d89746bcc75679f5e
+run_name: receptive-turtle-868
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763924057915
+status: 3
+tags: []
+user_id: fede

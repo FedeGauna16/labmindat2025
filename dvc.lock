@@ -21,12 +21,12 @@ stages:
     deps:
     - path: outputs/telco_churn_clean.csv
       hash: md5
-      md5: 3cdbfeb64a5df4f2e77cfd3d66caecf0
-      size: 1022253
+      md5: 0cf1db3ca1bc74b2c1612460a4879428
+      size: 1015319
     - path: src/train.py
       hash: md5
-      md5: 83058d237d6375f27ddc3249ffba9687
-      size: 3633
+      md5: 6207aa5da8ce50a22ed8e6259d137f45
+      size: 4085
     params:
       params.yaml:
         train:
@@ -39,30 +39,29 @@ stages:
             min_samples_split: 12
             min_samples_leaf: 2
           logistic_regression:
-            C: 5
+            C: 10
             penalty: l2
-            max_iter: 1000
             solver: liblinear
     outs:
     - path: metrics.json
       hash: md5
-      md5: 9480115b80fd6c2039993235c79693ce
-      size: 132
+      md5: 57aff81c8fcd2a2892fce00e5af19f5c
+      size: 145
     - path: models/model.joblib
       hash: md5
-      md5: 66819789a9477c1d9651d8c46b15f04b
-      size: 14513209
+      md5: 2ce7a453e165814909a0c2a90b622f18
+      size: 14468089
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: models/model.joblib
       hash: md5
-      md5: 66819789a9477c1d9651d8c46b15f04b
-      size: 14513209
+      md5: 2ce7a453e165814909a0c2a90b622f18
+      size: 14468089
     - path: outputs/telco_churn_clean.csv
       hash: md5
-      md5: 3cdbfeb64a5df4f2e77cfd3d66caecf0
-      size: 1022253
+      md5: 0cf1db3ca1bc74b2c1612460a4879428
+      size: 1015319
     - path: src/evaluate.py
       hash: md5
       md5: 85695087a466a4673fe7c24e04fe8f4f
@@ -70,6 +69,6 @@ stages:
     outs:
     - path: reports/
       hash: md5
-      md5: 199487c5b12d296b9b6d2d6ada22472d.dir
-      size: 37713
+      md5: a0a6045b1f12852b6578a07fa751ddb4.dir
+      size: 37802
       nfiles: 3
