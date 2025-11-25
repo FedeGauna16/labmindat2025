@@ -24,6 +24,14 @@ def main():
     for col in col_categoricas:
         df[col] = df[col].fillna('Unknown')
 
+    for col in col_numericas:
+        Q1 = df[col].quantile(0.25)
+        Q3 = df[col].quantile(0.75)
+        IQR = Q3 - Q1
+        lim_inf = Q1 - 1.5 * IQR
+        lim_sup = Q3 + 1.5 * IQR
+        df = df[(df[col] >= lim_inf) & (df[col] <= lim_sup)]
+    
     df['phone_service'] = df['phone_service'].map({'Yes':1,'No':0, 'No phone service':0})
     
     df = pd.get_dummies(df, columns=col_categoricas, drop_first=True)
