@@ -56,7 +56,6 @@ El proyecto quedó organizado con las siguientes carpetas principales:
 ├── dvc.yaml               # Pipeline completo
 ├── params.yaml            # Hiperparámetros modificables
 ├── .dvc/                  # Config DVC
-└── docs/                  # Documentación del proyecto
 
 
 Los stages del pipeline son:
@@ -90,7 +89,33 @@ Modelo elegido: "salty-stork-645"
 
 4. Justificación del Modelo Final
 
+Se mejoró la calidad del código utilizando feat, en donde se se probó un modelo de RandomForest y se trabajó con feature engineering. Se compara el modelo más performante del LogisticRegression, junto el modelo de RandomForest y un experimento de LogosticRegression utilizando feature engineering. Los detalles se encuentran en el archivo EXPERIMENTS.md junto a las visualizaciones de la evaluación de cada modelo
 
+Se mejoró la calidad del proyecto incorporando ramas feat-* para extender la experimentación. En estas ramas se evaluaron dos mejoras principales:
+* la inclusión de un modelo Random Forest
+* la aplicación de técnicas de feature engineering
+
+Luego, se comparó el rendimiento del modelo base (Logistic Regression) con:
+* el modelo Random Forest
+* una versión mejorada de Logistic Regression + Feature Engineering.
+
+Los resultados completos e incluyen métricas, conclusiones y visualizaciones generadas en la etapa de evaluación. Se encuentran documentados en el archivo EXPERIMENTS.md.
+
+En resumen.
+
+| Experimento	| C	| Accuracy	| Recall	| Precision | F1-Score |
+| --- | --- | --- | --- | --- | --- |
+| logistic_regression | 10	| 69.65%	| 43.52%	| 62.06% | 51.16% |
+
+Comparando los modelos se determina que el modelo final va a ser la version mejorada de Logistic Regression.
 
 5. Despliegue en Entorno Productivo
 
+La infomación completa del despliegue en producción se puede ver en DEPLOYMENT.md
+
+En resumen: 
+ - Arquitecturas propuestas, FastAPI o Streamlit.
+ - Versionado del modelo con DVC.
+ - Monitoreo continuo de métricas (MLflow).
+ - Automatización con CI/CD.
+ - Escalado con contenedores (Docker + Kubernetes).
