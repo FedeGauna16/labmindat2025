@@ -1,3 +1,10 @@
+## Comparación de Resultados entre Modelos y Selección del Modelo Final
+
+A continuación se presentan las métricas obtenidas en los diferentes experimentos realizados durante el proceso de modelado. Se compararon tres enfoques:
+1. Logistic Regression base
+2. Random Forest
+3. Logistic Regression con Feature Engineering
+
 Métricas del seleccionado mejor modelo a partir de la comparativa de los experimentos hecho con el modelo de Logistic Regression
 
 | Experimento	| C	| Accuracy	| Recall	| Precision | F1-Score |
@@ -21,7 +28,7 @@ Visualización de Curva ROC
 
 
 
-Métricas del experimento con Logistic Regression utilizando features engineering
+Métricas del experimento con Logistic Regression utilizando feature engineering
 
 | Experimento	| C	| Accuracy	| Recall	| Precision | F1-Score |
 | --- | --- | --- | --- | --- | --- |
@@ -31,8 +38,22 @@ Visualización de Matrix de Confusión
 
 <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/259a2d7d-2b15-44de-b204-1ae17b73af3f" />
 
+
 Visualización de Curva ROC
 
 <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/cb51962c-6352-4b7f-884d-d8b5dc4095ae" />
 
 
+## Conclusión: Selección del Modelo
+
+Tras analizar los tres enfoques, el modelo que mostró el rendimiento más sólido fue:
+
+------ Logistic Regression con Feature Engineering
+
+Este modelo presenta con:
+
+✔ El Accuracy más alto (69.65%)
+✔ Métricas equilibradas entre precisión y recall
+✔ Un desempeño competitivo frente al Random Forest, pero con menor complejidad
+
+Si bien el recall es ligeramente inferior al del experimento base, la mejora en Accuracy y la estabilidad del resto de las métricas hacen que sea el modelo con mayores probabilidades de generalizar correctamente y, por lo tanto, el mejor candidato para ser seleccionado como modelo final.
