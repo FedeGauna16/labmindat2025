@@ -52,10 +52,10 @@ El proyecto quedó organizado con las siguientes carpetas principales:
 ├── outputs/               # Datos limpios generados por preprocess
 ├── models/                # Modelos entrenados
 ├── reports/               # Métricas, curvas ROC y artefactos de evaluación
-├── src/                   # Código del pipeline
+├── src/                   # Código del pipeline (preprocess/train/evaluate)
 ├── dvc.yaml               # Pipeline completo
 ├── params.yaml            # Hiperparámetros modificables
-├── .dvc/                  # Config DVC
+└── .dvc/                  # Config DVC (cache local + remote config)
 
 
 Los stages del pipeline son:
@@ -88,8 +88,6 @@ Modelo elegido: "salty-stork-645"
 * En general, el experimento con mejor balance entre los hiperparámetros
 
 4. Justificación del Modelo Final
-
-Se mejoró la calidad del código utilizando feat, en donde se se probó un modelo de RandomForest y se trabajó con feature engineering. Se compara el modelo más performante del LogisticRegression, junto el modelo de RandomForest y un experimento de LogosticRegression utilizando feature engineering. Los detalles se encuentran en el archivo EXPERIMENTS.md junto a las visualizaciones de la evaluación de cada modelo
 
 Se mejoró la calidad del proyecto incorporando ramas feat-* para extender la experimentación. En estas ramas se evaluaron dos mejoras principales:
 * la inclusión de un modelo Random Forest
