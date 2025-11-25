@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import StandardScaler
 import joblib
 import mlflow
 
@@ -29,10 +30,14 @@ def train_logistic(params):
         X, y, test_size=test_size, random_state=random_state
     )
 
-    model = LogisticRegression(**model_params)
-    model.fit(X_train, y_train)
+    scaler = StandardScaler()
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
 
-    pred = model.predict(X_test)
+    model = LogisticRegression(**model_params)
+    model.fit(X_train_scaled, y_train)
+
+    pred = model.predict(X_test_scaled)
 
     metrics = {
         "accuracy": accuracy_score(y_test, pred),
@@ -60,7 +65,7 @@ def train_random_forest(params):
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=test_size, random_state=random_state
     )
-
+    
     model = RandomForestClassifier(**model_params)
     model.fit(X_train, y_train)
 
