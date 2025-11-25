@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/fede/Documents/GitHub/labmindat2025/mlruns/766489368222411749/fccef066a8ea401d9cfab04ab54271ba/artifacts
+end_time: 1764003205879
+entry_point_name: ''
+experiment_id: '766489368222411749'
+lifecycle_stage: active
+run_id: fccef066a8ea401d9cfab04ab54271ba
+run_name: LogRegModel=10
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764003205770
+status: 3
+tags: []
+user_id: fede

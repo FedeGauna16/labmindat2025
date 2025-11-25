@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/fede/Documents/GitHub/labmindat2025/mlruns/766489368222411749/models/m-3dbe248dd3cc45478ecef94d26655d6a/artifacts
+creation_timestamp: 1763924058080
+experiment_id: '766489368222411749'
+last_updated_timestamp: 1763924066469
+model_id: m-3dbe248dd3cc45478ecef94d26655d6a
+model_type: null
+name: model
+source_run_id: 596d17b8742b4c3d89746bcc75679f5e
+status: 2
+status_message: null

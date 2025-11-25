@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/fede/Documents/GitHub/labmindat2025/mlruns/766489368222411749/d3c61724eb9c4627b2641c566b523323/artifacts
+end_time: 1764002986197
+entry_point_name: ''
+experiment_id: '766489368222411749'
+lifecycle_stage: active
+run_id: d3c61724eb9c4627b2641c566b523323
+run_name: gentle-kite-78
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764002970319
+status: 3
+tags: []
+user_id: fede
