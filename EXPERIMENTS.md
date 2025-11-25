@@ -26,3 +26,12 @@ Métricas del experimento con Logistic Regression utilizando features engineerin
 | --- | --- | --- | --- | --- | --- |
 | salty-stork-645 | 10	| 68.65%	| 47.02%	| 56.75% | 51.43% |
 
+Visualización de Matrix de Confusión
+
+<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/5337fe80-0742-40df-9c2f-1d8409179b45" />
+
+Visualización de Curva ROC
+
+<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/fdef28a5-dd21-4411-8078-a59b500071aa" />
+
+
