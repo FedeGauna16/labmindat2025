@@ -32,32 +32,32 @@ stages:
         train:
           test_size: 0.2
           random_state: 42
-          model_name: random_forest
+          model_name: logistic_regression
           random_forest:
-            n_estimators: 150
-            max_depth: 15
-            min_samples_split: 12
+            n_estimators: 250
+            max_depth: 20
+            min_samples_split: 14
             min_samples_leaf: 2
           logistic_regression:
-            C: 10
+            C: 50
             penalty: l2
             solver: liblinear
     outs:
     - path: metrics.json
       hash: md5
-      md5: 0db6a788debc8ed67d6eca2cf909daf6
-      size: 144
+      md5: bf4a9683fc68044f92f6880e63b85550
+      size: 145
     - path: models/model.joblib
       hash: md5
-      md5: e9bff0340700a1cbb353091dd2f784ef
-      size: 14416409
+      md5: 4741f9ec983e1a79e233b33666bedc8a
+      size: 1019
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: models/model.joblib
       hash: md5
-      md5: e9bff0340700a1cbb353091dd2f784ef
-      size: 14416409
+      md5: 4741f9ec983e1a79e233b33666bedc8a
+      size: 1019
     - path: outputs/telco_churn_clean.csv
       hash: md5
       md5: 0cf1db3ca1bc74b2c1612460a4879428
@@ -69,6 +69,6 @@ stages:
     outs:
     - path: reports/
       hash: md5
-      md5: b2af32182f059c70441b7f7bf99303f3.dir
-      size: 37709
+      md5: cc1e3bd69f5e1fdcea12fe3722034433.dir
+      size: 40269
       nfiles: 3
