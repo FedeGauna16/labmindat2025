@@ -5,7 +5,7 @@ train:
   random_forest:
     n_estimators: 250
     max_depth: 20
-    min_samples_split: 12
+    min_samples_split: 14
     min_samples_leaf: 2
   logistic_regression:
     C: 10
