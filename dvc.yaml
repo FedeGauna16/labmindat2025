@@ -12,8 +12,7 @@ stages:
     deps:
       - src/train.py
       - outputs/telco_churn_clean.csv
-    params:
-      - train
+      - params.yaml
     outs:
       - models/model.joblib
     metrics:

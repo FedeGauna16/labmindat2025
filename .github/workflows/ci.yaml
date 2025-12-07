@@ -18,15 +18,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # Configurar credenciales de DagsHub
-      - name: Configure DagsHub credentials
-        env:
-          DAGSHUB_USER: ${{ secrets.DAGSHUB_USER }}
-          DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
-        run: |
-          git config --global credential.helper store
-          echo "https://${DAGSHUB_USER}:${DAGSHUB_TOKEN}@dagshub.com" > ~/.git-credentials
-
       # Configurar DVC remote
       - name: Setup DVC remote
         env:
