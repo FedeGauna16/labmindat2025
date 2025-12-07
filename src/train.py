@@ -17,7 +17,9 @@ import mlflow
 
 def train_logistic(params):
 
-    df = pd.read_csv("outputs/telco_churn_clean.csv")
+    input_path = "outputs/telco_churn_clean.csv"
+
+    df = pd.read_csv(input_path)
 
     test_size = params["train"]["test_size"]
     random_state = params["train"]["random_state"]
