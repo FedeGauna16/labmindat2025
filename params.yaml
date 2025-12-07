@@ -8,6 +8,6 @@ train:
     min_samples_split: 14
     min_samples_leaf: 2
   logistic_regression:
-    C: 50
+    C: 0.5
     penalty: "l2"
     solver: 'liblinear'
