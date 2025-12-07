@@ -1,13 +1,13 @@
 train:
   test_size: 0.2
   random_state: 42
-  model_name: random_forest  # "logistic_regression"
+  model_name: logistic_regression  # "random_forest"
   random_forest:
     n_estimators: 250
     max_depth: 20
     min_samples_split: 14
     min_samples_leaf: 2
   logistic_regression:
-    C: 10
+    C: 50
     penalty: "l2"
     solver: 'liblinear'
