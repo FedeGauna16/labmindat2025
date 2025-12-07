@@ -8,7 +8,7 @@ stages:
       - outputs/telco_churn_clean.csv
     
   train:
-    cmd: python src/train.py
+    cmd: conda run -n pycaret-env python src/train.py
     deps:
       - src/train.py
       - outputs/telco_churn_clean.csv
@@ -19,7 +19,7 @@ stages:
     metrics:
       - metrics.json
   evaluate:
-    cmd: python src/evaluate.py
+    cmd: conda run -n pycaret-env python src/evaluate.py
     deps:
       - src/evaluate.py
       - models/model.joblib
