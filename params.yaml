@@ -3,6 +3,10 @@ train:
   random_state: 42
   model_name: random_forest  # "logistic_regression"
   random_forest:
+    n_estimators: 275
+    max_depth: 20
+    min_samples_split: 14
+    min_samples_leaf: 4
     n_estimators: 250
     max_depth: 20
     min_samples_split: 14
