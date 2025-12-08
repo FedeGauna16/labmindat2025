@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/fede/Documents/GitHub/labmindat2025/mlruns/766489368222411749/models/m-a82ba81e2b4b4e6a9bbe7c37c8d051d9/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.0
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.6.0
+model_id: m-a82ba81e2b4b4e6a9bbe7c37c8d051d9
+model_size_bytes: 1349
+model_uuid: m-a82ba81e2b4b4e6a9bbe7c37c8d051d9
+prompts: null
+run_id: 27613a82f35c4b3e8a8ffb1977936be3
+utc_time_created: '2025-11-24 19:11:05.776140'

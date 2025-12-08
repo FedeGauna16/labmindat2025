@@ -13,7 +13,9 @@ import json
 def main():
     os.makedirs("reports", exist_ok=True)
 
-    df = pd.read_csv("outputs/telco_churn_clean.csv")
+    input_path = "outputs/telco_churn_clean.csv"
+
+    df = pd.read_csv(input_path)
     X = df.drop(columns=["churn"])
     y = df["churn"]
 

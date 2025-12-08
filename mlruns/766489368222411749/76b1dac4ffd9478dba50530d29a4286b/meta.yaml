@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/fede/Documents/GitHub/labmindat2025/mlruns/766489368222411749/76b1dac4ffd9478dba50530d29a4286b/artifacts
+end_time: 1764003167206
+entry_point_name: ''
+experiment_id: '766489368222411749'
+lifecycle_stage: active
+run_id: 76b1dac4ffd9478dba50530d29a4286b
+run_name: chill-bird-76
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764003153671
+status: 3
+tags: []
+user_id: fede
