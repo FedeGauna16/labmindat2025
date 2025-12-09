@@ -117,3 +117,8 @@ En resumen:
  - Monitoreo continuo de métricas (MLflow).
  - Automatización con CI/CD.
  - Escalado con contenedores (Docker + Kubernetes).
+
+
+-------------------- ENLACE DEL VIDEO --------------------
+
+https://drive.google.com/file/d/1_Q9OUWt6cInyw1I8szTd57KyGg9qAvmX/view?usp=sharing
